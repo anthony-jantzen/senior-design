@@ -15,8 +15,33 @@ A desktop and mobile application tool that allows for simple management of devic
 ## Problem Statement
 Our team wants a tool to simply manage devices on a wireless network, allowing for full transparency. Any lack of transparency puts users/administrators in the dark on their home network, paving the way for untrusted individuals to perform intrusions and malicious activities.
 
-## Inadequacy of Current Solutions
-*placeholder*
+## Inadequacy of Current Network Mangement Solutions
+### Netspot
+* Costs money - Not open source
+* Limits usage per cost tier
+* Focuses gathering data on multiple networks rather hardening local network
+* Usage is not as feature rich on Windows as Mac
+
+### LogicMonitor
+* Costs money
+* Usage is focused toward corporations, not home use
+
+### PRTG Network Monitor
+* Costs Money
+* Monitors More than just local Networks - can be overwhelming for inexperienced users
+
+### GFI Languard
+* Costs Money
+
+### OpenNMS
+* Too feature rich and not usable for inexperienced users
+* Doesn't integrate with router?
+
+### WifiDog
+* Doesn't have android/mobile alert integration
+
+### PacketFense
+* Doesn't have android/mobile alert integration
 
 ## Background Skills/Interests
 Our team overall has a general interest in networking and security, with three out of the four members possessing a background in security already. In addition, most if not all team members have some experience in web development and UI design, peaking the interests of those more inclined to application development and design. Above all else, this project looks to be a challenging task that will no doubt result in a very useful final product.
