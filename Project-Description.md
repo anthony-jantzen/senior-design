@@ -1,4 +1,4 @@
-# Wireless Network Helper
+# Wireless Network Management Helper
 
 ## Team Members
 * Matt Ihlenfield: ihlenfmt@mail.uc.edu
@@ -13,13 +13,13 @@
 A desktop and mobile application tool that allows for simple management of devices connected to a wireless network. The tool will enable the user to configure settings to allow for trustworthy devices and blacklist those which are not.
 
 ## Problem Statement
-Our team wants a tool to simply manage devices on a wireless network, allowing for full transparency. Any lack of transparency puts users/administrators in the dark on their home network, paving the way for untrusted individuals to perform intrusions and malicious activities.
+Our team wants a tool to simply manage devices on a wireless network, allowing for full transparency. Any lack of transparency puts users/administrators in the dark on their home network, paving the way for untrusted individuals to perform intrusions and malicious activities. Additionally, the tool needs to be simple and accessible for anyone.
 
 ## Inadequacy of Current Network Mangement Solutions
 ### Netspot
-* Costs money - Not open source
+* Costs money - not open source
 * Limits usage per cost tier
-* Focuses gathering data on multiple networks rather hardening local network
+* Focuses gathering data on multiple networks rather than hardening local network
 * Usage is not as feature rich on Windows as Mac
 
 ### LogicMonitor
@@ -27,15 +27,15 @@ Our team wants a tool to simply manage devices on a wireless network, allowing f
 * Usage is focused toward corporations, not home use
 
 ### PRTG Network Monitor
-* Costs Money
-* Monitors More than just local Networks - can be overwhelming for inexperienced users
+* Costs money
+* Monitors More than just local networks - can be overwhelming for inexperienced users
 
 ### GFI Languard
-* Costs Money
+* Costs money
 
 ### OpenNMS
 * Too feature rich and not usable for inexperienced users
-* Doesn't integrate with router?
+* Doesn't integrate with router
 
 ### WifiDog
 * Doesn't have android/mobile alert integration
@@ -49,13 +49,13 @@ Our team overall has a general interest in networking and security, with three o
 ## Approach
 Our proposed solution is to design a desktop and mobile application that will provide a clear view of devices connected to a network with configurable settings and access management. More details follow in our goals and expectations:
 
-#### Goals
+### Goals
 * Simple listing of devices on network or attempting to connect, including MAC address, name, and manufacturer
 * Configurable settings to permanently store personal or trusted devices
 * Alertable prompt to trust or blacklist devices attempting to connect to network
 * Sleek, easy-to-use interface for applications
-* OpenWRT integration for ubiquity to all router
+* OpenWRT integration for ubiquity to all routers
 * Temporary access grants for guest devices that expires on user-configured settings
 
-#### Expectations
-*placeholder*
+### Expectations
+Ideally, our team aims to fulfill the goals above and any additional requirements added along the way. A hands on demo targeting the core functionalities of the two applications will be core to our development and planning. Above all else, the final product is expected to be usable and accessible to anyone, especially individuals who are not savvy with technology or networking.
