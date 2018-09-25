@@ -6,6 +6,6 @@ My team's project for senior design is a network management helper. We will be b
 
 *paragraph 3*
 
-*paragraph 4*
+Our motivation behind this tool stems from the cost and complexities associated with similar tools on the market currently. The overall goal is to reach individuals who may not be savvy with technology or networking and provide them with a tool that makes it easy to enhance the security of their network. This goal is what motivates me, specifically, to complete the project. If I'm able to take the final product home with me and see my parents using it, I know we will have succeeded. My aforementioned experience in security and application development will make this project fun. In addition, I believe the project will give me a good experience in networking and software engineering lifecycles.
 
-Our motivation behind this tool stems from the cost and complexities associated with similar tools on the market currently. The overall goal is to reach individuals who may not be savvy with technology or networking and provide them with a tool that makes it easy to enhance the security of their network.
+*paragraph 5*
