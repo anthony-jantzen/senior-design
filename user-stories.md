@@ -6,4 +6,4 @@ As a **home-owner**, I want to trust or deny the devices connecting to my networ
 
 As a **home-owner**, I want to configure settings for my network so that I can manage all devices on it.
 
-As a **home-owner**, I want to configure allow temporary access to my network to guests.
+As a **home-owner**, I want to allow temporary access to my network to guests.
