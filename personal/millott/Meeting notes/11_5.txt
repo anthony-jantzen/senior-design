@@ -1,0 +1,38 @@
+App is going to blind. Its not going to know anything about the network until runtime
+App should be able to take in PCAP or live packet stream 
+Might be useful to make phone an access point?
+Range? - depends on the device
+Using unencrypted frame data that contains the time the packet was sent to the time it was recieved
+Packets travel at the speed of light which is going to be the speed measurement
+using the time and the speed measurements, we can calculate the distance metricc
+This distance metric will not be a location but rather a radius from the host that the target device
+sniffing the frame data for time stamps - no need for a mesh network or access points
+
+Need two packets to calculate the time/RTT using beacon packets
+First packet is sent from host A to target B and the time of sending is recorded
+second packet is sent from target B to host A and the time of recieving is recorded
+
+This doesn't necessarily need to be using beacon packets but need
+
+beacon frames are what the access points to let devices in the area know they exist
+	- contains information needed for connection
+
+Time of flight might not work as it requires clock syncronization
+
+### GAME CHANGE ####
+
+In order to mitigate time of flight syncroniztion errors (1 microsecond making a difference of 300 meters)
+we will go with Route 1 which will use Time of Flight in combination with RSSI information. 
+
+The new app will be used by an IT administrator or someone with access to the network. This individual will
+have information about the network, access to its devices, and measurements between access points. The devices
+on the network will be assumed to have their clocks synchonized. This will allow for the central node to gain
+an accurate reading on the individual devices through calculating distance with RSSI and Time of Flight. 
+
+The central node will host/send data to/ a server that hosts the distance metrics for client side. Possibly 
+through an API allowing for external development. 
+
+# TODO maybe create a script that initializes the settings
+
+We also will have a viewer that renders the relative location of the device in comparison to the central node.
+This will most likely be done in D3 for the nodes and Leaflet/google maps for a background. 
