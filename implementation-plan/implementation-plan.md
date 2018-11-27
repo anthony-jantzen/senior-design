@@ -19,3 +19,11 @@ Design and develop the user interface for the client device, including features 
 
 ### 7. Test and document project
 Perform unit and integration tests of all modules in the project design. Document project according to course assignments. Conduct end user tests to gather feedback, document necessary instructions, and adjust implementation accordingly.
+
+----
+## Timeline
+| Task # | Description | Start Date | End Date | Prerequisite | Milestone |
+|:------:|:-----------:|:----------:|:--------:|:------------:|:---------:|
+|    1   |             |            |          |              |           |
+|    2   |             |            |          |              |           |
+|    3   |             |            |          |              |           |
