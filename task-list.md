@@ -11,6 +11,7 @@
 * Write module to process packets and retrieve relevant data on central server.
 * Write and perform unit and integration tests for design modules.
 * Manage documentation, requirements deadlines, and code testing for project.
+* Obtain required hardware components for project, such as access points, central server, and client/target devices.
 
 #### Pat Millott
 * Generate communications module between central server and client device.
