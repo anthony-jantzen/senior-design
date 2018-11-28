@@ -44,3 +44,4 @@ Perform unit and integration tests of all modules in the project design. Documen
 
 ----
 ## Effort Matrix
+![](effort-matrix.png)
