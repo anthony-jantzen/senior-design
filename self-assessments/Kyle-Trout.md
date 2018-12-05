@@ -1,4 +1,4 @@
-Matt Ihlenfield<br />
+Kyle Trout<br />
 Dr. Annexstein<br />
 Senior Design I<br />
 
