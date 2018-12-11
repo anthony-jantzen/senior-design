@@ -2,7 +2,7 @@
 Detailed below are three design diagrams representing the solution at varying complexities:
 * [High-Level](d0-high-level.png): Basic overview of inputs and outputs to the system.
 * [Mid-Level](d1-mid-level.png): Intermediate overview of modules and submodules to the system.
-* [Low-Level](d0-low-level.png): Advanced overview with granular descriptions of modules/submodules in the system.
+* [Low-Level](d2-low-level.png): Advanced overview with granular descriptions of modules/submodules in the system.
 
 ## Design Components
 The following is a brief description of each component featured in the design diagrams:
