@@ -1,4 +1,4 @@
-# Wireless Network Management Helper
+# Argus
 
 ## Team Members
 * Matt Ihlenfield: ihlenfmt@mail.uc.edu
