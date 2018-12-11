@@ -6,7 +6,7 @@ Senior Design Repository for Matt Ihlenfield, Anthony Jantzen, Pat Millott, and 
 
 ## Table of Contents
 
-1. [Abstract](#deliverables/abstract.md)
+1. [Abstract](deliverables/abstract.md)
 2. [Project Description](deliverables/project-description.md)
 3. [User Stories](deliverables/user-stories.md)
 4. [Design Diagrams](deliverables/)
