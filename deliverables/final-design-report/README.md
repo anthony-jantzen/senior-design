@@ -8,7 +8,7 @@
 5. Spring Final PPT Presentation, 
 6. Final Expo Poster
 7. Assessments
-  * Initial Self-Assessments (fall semester)
-  * Final Self-Assessments (spring semester, do not include confidentialTeam-Assessments)
+   * Initial Self-Assessments (fall semester)
+   * Final Self-Assessments (spring semester, do not include confidentialTeam-Assessments)
 8. Summary of Hours and Justification (one per individual team member)
 9. Summary of Expenses (Optional)
