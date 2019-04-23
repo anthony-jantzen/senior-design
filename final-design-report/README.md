@@ -1,7 +1,7 @@
 # Argus - Final Design Report
 
 ## Table of Contents
-1. Project Description (updated to include 150-word abstract and should reflect final version of the project)
+1. [Project Description](../deliverables/project-description.md) (updated to include 150-word abstract and should reflect final version of the project)
 2. User Interface Specification (optional inclusion of UI design)
 3. Test Plan and Results (describe execution and results of all tests)
 4. User Manual (includes links and screenshots of online user manual; include FAQ in report)
