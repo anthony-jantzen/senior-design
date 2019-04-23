@@ -1,4 +1,5 @@
 # Budget
 
 ## Expenses to Date
-There have been no expenses to date. Winter break will be utilized to determine hardware requirements, expenses, and possible sources of donation.
+* (3x) Wireless Access Points - $75 ($25 each)
+* (1x) Tri-fold Poster Board - $8
