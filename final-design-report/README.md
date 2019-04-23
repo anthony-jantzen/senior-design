@@ -11,4 +11,4 @@
    * [Initial Self-Assessments](../deliverables/initial-self-assessments/)
    * [Final Self-Assessments](../deliverables/final-self-assessments/)
 8. Summary of Hours and Justification (one per individual team member)
-9. [Summary of Expenses](deliverables/budget.md)
+9. [Summary of Expenses](../deliverables/budget.md)
