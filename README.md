@@ -13,6 +13,6 @@ Senior Design Repository for Matt Ihlenfield, Anthony Jantzen, Pat Millott, and 
 5. [Project Tasks](deliverables/implementation-plan/implementation-plan.md)
 6. [ABET Constraints Essay](deliverables/abet-constraints.md)
 7. [Slideshow](deliverables/presentation.pdf)
-8. [Self-Assessment Essays](deliverables/self-assessments/)
+8. [Self-Assessment Essays](deliverables/initial-self-assessments/)
 9. [Professional Biographies](deliverables/bios/)
 10. [Budget](deliverables/budget.md)
