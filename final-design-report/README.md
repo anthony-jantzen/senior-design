@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Project Description](../deliverables/project-description.md)
-2. User Interface Specification (optional inclusion of UI design)
+2. [User Interface Specification](../deliverables/ui-specification/specification.md)
 3. Test Plan and Results (describe execution and results of all tests)
 4. User Manual (includes links and screenshots of online user manual; include FAQ in report)
 5. [Spring Final Presentation](../deliverables/final-presentation.pdf)
