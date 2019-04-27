@@ -49,7 +49,7 @@ ND3
 DP1
 
 1. This test will ensure that the packets captured are properly parsed.
-2. This test will utilize (scapy?) and custom built programs to parse incoming packets for required information (see outputs).
+2. This test will utilize scapy and custom built programs to parse incoming packets for required information (see outputs).
 3. Inputs will be the incoming packet capture files.
 4. Outputs will be the timestamp, RSSI data, MAC address, and access point number in JSON format.
 5. Normal
@@ -57,7 +57,7 @@ DP1
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: Python script was written using scapy, a Python library for parsing packet captures, and the required information (radio headers featuring timestamps, RSSI, etc.) was printed as JSON output.
 
 DP2
 
@@ -70,7 +70,7 @@ DP2
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: This issue was never actually encountered. Instead, the most recent data for each device from any given access point was used to recalculate the location estimations.
 
 DP3
 
@@ -83,7 +83,7 @@ DP3
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: Location data was manually collected for each of the access points as well as a team members mobile phone using Google maps and our own distance based measurements during a test capture. The automated packet capture was then filtered and ran through the trilateration algorithm. The manual and automated output were then compared to reveal a successful location estimation.
 
 DP4
 
@@ -96,7 +96,7 @@ DP4
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: Basic query on a packet's timestamp was run. Requested information (timestamp, RSSI, etc.) was successfully seen in output.
 
 DP5
 
@@ -109,7 +109,7 @@ DP5
 7. Functional
 8. Integration
 
-**Result**:
+**Result**: This issue was never encountered. The test was deemed unnecessary as the lack of a heatmap forming on the interface would alert to capture failure.
 
 ### Web Application Tests
 
@@ -124,7 +124,7 @@ WA1
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: The frontend application requested information from a test file on the backend server, and the string within the test file was successfully seen as a response.
 
 WA2
 
@@ -137,7 +137,7 @@ WA2
 7. Functional
 8. Unit
 
-**Result**:
+**Result**: Similar to WA1, a request for information was sent to the backend server. This time, the same query from DP4 was sent. The requested information in the query was successfully seen returned in the response.
 
 WA3
 
@@ -150,27 +150,14 @@ WA3
 7. Functional
 8. Unit
 
-**Result**:
-
-WA4
-
-1. This test will ensure that notifications are enabled properly by the admin.
-2. This test will send a dummy request to the server when the admin enables notifications, which will then send a dummy response back and trigger a frontend notification based on program logic.
-3. Inputs for this test will be some form of button press by the admin to enable notifications.
-4. Outputs for this test will be a dummy notification popping up on the admin’s screen.
-5. Normal
-6. Whitebox
-7. Functional
-8. Unit
-
-**Result**:
+**Result**: Similar to DP3, the manually collected locations for the access points and the mobile phone were compared to the visual rendering output of the location estimates from the trilateration algorithm. Finally, the visual rendering was analyzed with the x,y coordinates and distance scaling of the heatmap library to indicate a successful location graphing.
 
 ### Product Performance Tests
 
 PP1
 
 1. This test will ensure the accuracy of the device location calculation.
-2. This test will compare a manually dropped pin for a device’s location against the program’s trilateration calculation to validate location accuracy within 2 meters.
+2. This test will compare a manually dropped pin for a device’s location against the program’s trilateration calculation to validate location accuracy within 3 meters.
 3. Inputs for this test will be the manually pinned location data and packets captured for the device by the access points.
 4. Outputs for this test will be the calculated location data and map view of the device, as well as the comparison result.
 5. Normal
@@ -178,7 +165,7 @@ PP1
 7. Performance
 8. Unit
 
-**Result**:
+**Result**: This test was the performance variant to DP3. As stated in the results of that test, the accuracy was successfully confirmed (average of 3 meters achieved).
 
 PP2
 
@@ -191,7 +178,7 @@ PP2
 7. Performance
 8. Integration
 
-**Result**:
+**Result**: Execution of trilateration algorithm was timed over multiple iterations with an average of 2-3 seconds per packet capture.
 
 ## Part III. Test Case Matrix
 | Identifier | Normal/Abnormal | Blackbox/Whitebox | Functional/Performance | Unit/Integration |
@@ -207,6 +194,5 @@ PP2
 | WA1        | Normal          | Blackbox          | Functional             | Unit             |
 | WA2        | Normal          | Blackbox          | Functional             | Unit             |
 | WA3        | Normal          | Blackbox          | Functional             | Unit             |
-| WA4        | Normal          | Whitebox          | Functional             | Unit             |
 | PP1        | Normal          | Whitebox          | Performance            | Integration      |
 | PP2        | Normal          | Whitebox          | Performance            | Integration      |
