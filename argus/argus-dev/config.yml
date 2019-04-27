@@ -1,0 +1,14 @@
+transmitter_freq: 2462
+access_points:
+    argus1:
+        x: -145.84
+        y: -43.36
+        capture_file: "./captures/argus1-filtered.pcap"
+    argus2:
+        x: 111.66
+        y: -43.36
+        capture_file: "./captures/argus2-filtered.pcap"
+    argus3:
+        x: 34.17
+        y: 86.7
+        capture_file: "./captures/argus3-filtered.pcap"

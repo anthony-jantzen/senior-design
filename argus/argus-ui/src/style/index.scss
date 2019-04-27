@@ -1,0 +1,19 @@
+@import './catamaran';
+@import './_variables';
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;
+	background: $black;
+	font-family: 'Catamaran', 'Helvetica Neue', arial, sans-serif;
+	color: $white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+	height: 60%;
+}

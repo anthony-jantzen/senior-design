@@ -1,0 +1,26 @@
+/* catamaran-regular - latin */
+@font-face {
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/font/catamaran.eot'); /* IE9 Compat Modes */
+  src: local('Catamaran Regular'), local('Catamaran-Regular'),
+       url('../assets/font/catamaran.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/font/catamaran.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/font/catamaran.woff') format('woff'), /* Modern Browsers */
+       url('../assets/font/catamaran.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/font/catamaran.svg#Catamaran') format('svg'); /* Legacy iOS */
+}
+/* catamaran-600 - latin */
+@font-face {
+  font-family: 'Catamaran';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/font/catamaran-600.eot'); /* IE9 Compat Modes */
+  src: local('Catamaran SemiBold'), local('Catamaran-SemiBold'),
+       url('../assets/font/catamaran-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/font/catamaran-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/font/catamaran-600.woff') format('woff'), /* Modern Browsers */
+       url('../assets/font/catamaran-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/font/catamaran-600.svg#Catamaran') format('svg'); /* Legacy iOS */
+}

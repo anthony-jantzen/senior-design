@@ -1,0 +1,39 @@
+@import '../../style/_variables';
+
+header {
+	background: $grey;
+	border-bottom: $xs $maroon solid;
+	box-sizing: border-box;
+	height: 6.4rem;
+	line-height: 6.4rem;
+	padding-left: $m;
+	color: $maroon;
+
+	& > h1 {
+		float: left;
+		margin: 0;
+		font-size: $xl;
+	}
+
+	& > nav {
+		font-size: $base;
+		display: none;
+
+		& > a {
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+			color: inherit;
+			will-change: background-color;
+
+			&:hover,
+			&:active {
+				background: rgba(0,0,0,0.2);
+			}
+
+			&.active {
+				background: rgba(0,0,0,0.4);
+			}
+		}
+	}
+}
