@@ -21,24 +21,28 @@ ND1
 ND2
 
 1. This test will ensure that the access points are capturing data.
-2. This test will utilize aircrack-ng to capture packets on each access point sent by nearby wireless emitters.
+2. This test will utilize tcpdump to capture packets on each access point sent by nearby wireless emitters.
 3. Inputs for this test will be the packets captured from the devices.
-4. Outputs for this test will be the standard files created by aircrack-ng including PCAP and CSV files.
+4. Outputs for this test will be the standard files created by tcpdump including PCAP files.
 5. Normal
 6. Blackbox
 7. Functional
 8. Unit
 
+**Result**: USB drives were mounted to the drives of each of the access points. A wireless interface was opened up on each to listen for traffic. tcpdump was run on each AP to capture packets. The run was cancelled after a few minutes and the resulting pcaps were analyzed, revealing a successful capture of required information.
+
 ND3
 
 1. This test will ensure that the access points are sending data to the central server.
-2. This test will utilize (INSERT TOOL; rsync maybe?) to send packet capture files from the access points to the central server for further processing.
+2. This test will utilize rsync to send packet capture files from the access points to the central server for further processing.
 3. Inputs will be the packet capture files on the access points.
 4. Outputs will be the packet capture files on the central server.
 5. Normal
 6. Blackbox
 7. Functional
 8. Unit
+
+**Result**: Automated rsync script was added to each access point to transfer pcap files, which were successfully seen on the central server.
 
 ### Data Processing Tests
 
@@ -53,6 +57,8 @@ DP1
 7. Functional
 8. Unit
 
+**Result**:
+
 DP2
 
 1. This test will ensure the validity of the packets captured.
@@ -63,6 +69,8 @@ DP2
 6. Blackbox
 7. Functional
 8. Unit
+
+**Result**:
 
 DP3
 
@@ -75,6 +83,8 @@ DP3
 7. Functional
 8. Unit
 
+**Result**:
+
 DP4
 
 1. This test will ensure the proper storage of device data.
@@ -86,6 +96,8 @@ DP4
 7. Functional
 8. Unit
 
+**Result**:
+
 DP5
 
 1. This test will ensure alerting on potential packet capture failure.
@@ -96,6 +108,8 @@ DP5
 6. Blackbox
 7. Functional
 8. Integration
+
+**Result**:
 
 ### Web Application Tests
 
@@ -110,6 +124,8 @@ WA1
 7. Functional
 8. Unit
 
+**Result**:
+
 WA2
 
 1. This test will ensure that the web application can communicate with the database.
@@ -120,6 +136,8 @@ WA2
 6. Blackbox
 7. Functional
 8. Unit
+
+**Result**:
 
 WA3
 
@@ -132,6 +150,8 @@ WA3
 7. Functional
 8. Unit
 
+**Result**:
+
 WA4
 
 1. This test will ensure that notifications are enabled properly by the admin.
@@ -142,6 +162,8 @@ WA4
 6. Whitebox
 7. Functional
 8. Unit
+
+**Result**:
 
 ### Product Performance Tests
 
@@ -156,6 +178,8 @@ PP1
 7. Performance
 8. Unit
 
+**Result**:
+
 PP2
 
 1. This test will ensure the efficiency of the final product as a system.
@@ -166,7 +190,9 @@ PP2
 6. Whitebox
 7. Performance
 8. Integration
- 
+
+**Result**:
+
 ## Part III. Test Case Matrix
 | Identifier | Normal/Abnormal | Blackbox/Whitebox | Functional/Performance | Unit/Integration |
 |------------|-----------------|-------------------|------------------------|------------------|
