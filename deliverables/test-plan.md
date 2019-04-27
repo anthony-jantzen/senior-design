@@ -16,6 +16,8 @@ ND1
 7. Functional
 8. Unit
 
+**Result**: Access points were attached to and powered by laptops. Pings were sent to each AP's individual IP, which all returned successfully. Each laptop was able to successfully ssh into the respective AP.
+
 ND2
 
 1. This test will ensure that the access points are capturing data.
