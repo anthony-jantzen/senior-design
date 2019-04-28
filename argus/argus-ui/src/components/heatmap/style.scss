@@ -1,0 +1,44 @@
+@import '../../style/_variables';
+
+.heatmap {
+  background-color: $grey;
+  box-sizing: border-box;
+  border-radius: $xxs;
+  position: relative;
+
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ap {
+  background-color: $maroon;
+  border-radius: $xxs;
+  width: $l;
+  height: $l;
+  position: absolute;
+  text-align: center;
+  line-height: $l;
+  z-index: 1;
+}
+
+.legend {
+  text-align: center;
+
+  & > figcaption {
+    &:first-child {
+      position: static;
+      margin-bottom: $xxs;
+    }
+
+    display: inline-block;
+    line-height: $l;
+    height: $l;
+    margin-left: $s;
+  }
+}

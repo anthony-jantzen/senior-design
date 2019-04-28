@@ -1,0 +1,13 @@
+@import '../../style/_variables';
+
+.home {
+	font-size: $base;
+	max-width: 920px;
+	margin: 0 auto;
+	height: 100%;
+
+	& > h3 {
+		text-align: center;
+		margin: $s;
+	}
+}
