@@ -57,6 +57,18 @@ item = {
 #### Location Processing
 
 
+#### Testing
+Testing was conducted using the robotframework. Robotframework tests consist of test suites, test cases, and test keywords. A test keyword tests an indivudal element from argus. A test case insures that individual keywords integrate together. A test suite is composed of multiple test cases that verifies the integrity of the program. To run the tests, install robotframeowrk with:
+
+```pip3 install robotframework```
+
+Then move to the argus-dev directory and execute the tests with:
+
+```robot -d tests/output/Argus tests/Argus.robot```
+
+This will output a log.html file that shows Argus as a test suite and the results from the tests.
+
+
 ## User Interface Setup
 
 #### Notes
