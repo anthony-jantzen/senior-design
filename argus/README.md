@@ -8,6 +8,7 @@ Argus is a tool for estimating the locations of devices positioned on or nearby 
 
 #### Hardware Requirements
 * (3x) Wireless Access Points
+
 **Note:** The access point we utilized for this project was the GL.iNet 150M Mini Smart Router. Setup may differ slightly when using other products.
 
 For each access point (AP):
