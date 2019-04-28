@@ -1,0 +1,9 @@
+usage: argus.py [-h] [-c CONFIG]
+
+argus
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Config file. Defaults to config.yml
+

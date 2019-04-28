@@ -1,14 +1,14 @@
-transmitter_freq: 2462
 access_points:
-    argus1:
-        x: -145.84
-        y: -43.36
-        capture_file: "./captures/argus1-filtered.pcap"
-    argus2:
-        x: 111.66
-        y: -43.36
-        capture_file: "./captures/argus2-filtered.pcap"
-    argus3:
-        x: 34.17
-        y: 86.7
-        capture_file: "./captures/argus3-filtered.pcap"
+  argus1:
+    capture_file: tests/test_caps/small_cap_test-01.cap
+    x: -145.84
+    y: -43.36
+  argus2:
+    capture_file: tests/test_caps/small_cap_test-02.cap
+    x: 111.66
+    y: -43.36
+  argus3:
+    capture_file: tests/test_caps/small_cap_test-03.cap
+    x: 34.17
+    y: 86.7
+transmitter_freq: 2462

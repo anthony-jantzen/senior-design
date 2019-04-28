@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.6.7 on linux)" generated="20190428 14:38:22.918" rpa="false">
+<suite id="s1" name="Argus" source="/home/dev/Desktop/senior-design/argus/argus-dev/tests/Argus.robot">
+<test id="s1-t1" name="File Check Test">
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>argus.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.953" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/argus.py"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/argus.py&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.953" endtime="20190428 14:38:22.953"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>config.yml</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.953" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.953" endtime="20190428 14:38:22.953"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>install.sh</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.954" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/install.sh"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/install.sh&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.954" endtime="20190428 14:38:22.954"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>location.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.954" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/location.py"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/location.py&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.954" endtime="20190428 14:38:22.954"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>packet_processor.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.954" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/packet_processor.py"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/packet_processor.py&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.954" endtime="20190428 14:38:22.954"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>README.md</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.955" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/README.md"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/README.md&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.955" endtime="20190428 14:38:22.955"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>requirements.txt</arg>
+</arguments>
+<msg timestamp="20190428 14:38:22.955" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/requirements.txt"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/requirements.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:22.955" endtime="20190428 14:38:22.955"></status>
+</kw>
+<doc>Checks that all argus files have been installed correctly</doc>
+<status status="PASS" starttime="20190428 14:38:22.952" endtime="20190428 14:38:22.955" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Argus Missing Config Test">
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>python3 argus.py -c test.yml</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20190428 14:38:22.958" level="INFO">Running command 'python3 argus.py -c test.yml 2&gt;&amp;1'.</msg>
+<msg timestamp="20190428 14:38:23.783" level="INFO">${output} = usage: argus.py [-h] [-c CONFIG]
+argus.py: error: Must provide a valid config file</msg>
+<status status="PASS" starttime="20190428 14:38:22.956" endtime="20190428 14:38:23.783"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${MISSING_CONFIG_STRING1}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:23.784" endtime="20190428 14:38:23.784"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>${MISSING_CONFIG_STRING2}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:23.784" endtime="20190428 14:38:23.784"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>test.yml</arg>
+</arguments>
+<msg timestamp="20190428 14:38:23.785" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/test.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/test.yml&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:23.785" endtime="20190428 14:38:23.785"></status>
+</kw>
+<doc>Verifies argus output when config file is missing</doc>
+<status status="PASS" starttime="20190428 14:38:22.956" endtime="20190428 14:38:23.785" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Argus Help Test">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>tests/test_files/usage.out</arg>
+</arguments>
+<assign>
+<var>${help_output}</var>
+</assign>
+<msg timestamp="20190428 14:38:23.786" level="INFO" html="yes">Getting file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_files/usage.out"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_files/usage.out&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:23.786" level="INFO">${help_output} = usage: argus.py [-h] [-c CONFIG]
+
+argus
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Config file. Defaults to confi...</msg>
+<status status="PASS" starttime="20190428 14:38:23.786" endtime="20190428 14:38:23.786"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>python3 argus.py --help</arg>
+</arguments>
+<assign>
+<var>${argus_output}</var>
+</assign>
+<msg timestamp="20190428 14:38:23.787" level="INFO">Running command 'python3 argus.py --help 2&gt;&amp;1'.</msg>
+<msg timestamp="20190428 14:38:24.608" level="INFO">${argus_output} = usage: argus.py [-h] [-c CONFIG]
+
+argus
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Config file. Defaults to confi...</msg>
+<status status="PASS" starttime="20190428 14:38:23.786" endtime="20190428 14:38:24.609"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${help_output}</arg>
+<arg>${argus_output}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:24.609" endtime="20190428 14:38:24.609"></status>
+</kw>
+<doc>Verifies the usage output from argus</doc>
+<status status="PASS" starttime="20190428 14:38:23.785" endtime="20190428 14:38:24.609" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Empty Pcap Test">
+<kw name="Change AP Config File">
+<doc>Changes the configuration files that the APs use for
+argus</doc>
+<arguments>
+<arg>${EMPTY_PCAP01}</arg>
+<arg>${EMPTY_PCAP02}</arg>
+<arg>${EMPTY_PCAP03}</arg>
+</arguments>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus1</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:24.615" level="INFO">/home/dev/Desktop/senior-design/argus/argus-dev/tests/libraries/YamlLibrary.py:14: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  argus_config = yaml.load(f)</msg>
+<status status="PASS" starttime="20190428 14:38:24.611" endtime="20190428 14:38:24.615"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:24.616" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:24.616" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:24.616" endtime="20190428 14:38:24.616"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus2</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:24.616" endtime="20190428 14:38:24.620"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:24.621" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:24.621" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:24.620" endtime="20190428 14:38:24.621"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus3</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:24.621" endtime="20190428 14:38:24.625"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:24.626" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:24.626" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:24.625" endtime="20190428 14:38:24.626"></status>
+</kw>
+<status status="PASS" starttime="20190428 14:38:24.610" endtime="20190428 14:38:24.626"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>python3 argus.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:24.627" level="INFO">Running command 'python3 argus.py 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20190428 14:38:24.626" endtime="20190428 14:38:25.461"></status>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.462" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:25.461" endtime="20190428 14:38:25.462"></status>
+</kw>
+<kw name="File Should Not Be Empty" library="OperatingSystem">
+<doc>Fails if the specified directory is empty.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.462" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' contains 19 bytes.</msg>
+<status status="PASS" starttime="20190428 14:38:25.462" endtime="20190428 14:38:25.462"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>output.json</arg>
+<arg>{"loc_updates": []}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.463" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:25.463" level="INFO">1 out of 1 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:25.462" endtime="20190428 14:38:25.463"></status>
+</kw>
+<doc>Checks the output from argus with empty pcaps as input</doc>
+<status status="PASS" starttime="20190428 14:38:24.610" endtime="20190428 14:38:25.463" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Small Pcap Test">
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP01} -Y '(frame.time &gt;= ${CAP_TIME_VALID_START}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_VALID_END})' -w tests/test_caps/small_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.465" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-01.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:33.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:33.603000000")' -w tests/test_caps/small_cap_test-01.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:25.464" endtime="20190428 14:38:25.656"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP02} -Y '(frame.time &gt;= ${CAP_TIME_VALID_START}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_VALID_END})' -w tests/test_caps/small_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.658" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-adj-02.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:33.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:33.603000000")' -w tests/test_caps/small_cap_test-02.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:25.657" endtime="20190428 14:38:25.841"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP03} -Y '(frame.time &gt;= ${CAP_TIME_VALID_START}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_VALID_END})' -w tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:25.844" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-adj-03.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:33.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:33.603000000")' -w tests/test_caps/small_cap_test-03.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:25.842" endtime="20190428 14:38:26.039"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.040" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-01.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-01.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:26.040" endtime="20190428 14:38:26.040"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.040" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-02.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-02.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:26.040" endtime="20190428 14:38:26.040"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.041" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-03.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-03.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:26.040" endtime="20190428 14:38:26.041"></status>
+</kw>
+<kw name="Change AP Config File">
+<doc>Changes the configuration files that the APs use for
+argus</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-01.cap</arg>
+<arg>tests/test_caps/small_cap_test-02.cap</arg>
+<arg>tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus1</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:26.041" endtime="20190428 14:38:26.046"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.046" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:26.047" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:26.046" endtime="20190428 14:38:26.047"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus2</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:26.047" endtime="20190428 14:38:26.051"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.051" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:26.052" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:26.051" endtime="20190428 14:38:26.052"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus3</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:26.052" endtime="20190428 14:38:26.056"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.056" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:26.057" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:26.056" endtime="20190428 14:38:26.057"></status>
+</kw>
+<status status="PASS" starttime="20190428 14:38:26.041" endtime="20190428 14:38:26.057"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>python3 argus.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:26.058" level="INFO">Running command 'python3 argus.py 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20190428 14:38:26.057" endtime="20190428 14:38:27.360"></status>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.360" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:27.360" endtime="20190428 14:38:27.360"></status>
+</kw>
+<kw name="File Should Not Be Empty" library="OperatingSystem">
+<doc>Fails if the specified directory is empty.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.361" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' contains 9953 bytes.</msg>
+<status status="PASS" starttime="20190428 14:38:27.361" endtime="20190428 14:38:27.361"></status>
+</kw>
+<kw name="Get Dict From Json File" library="JSONLibrary">
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20190428 14:38:27.362" level="INFO">${output} = {'loc_updates': [{'timestamp': 1552597773.602372, 'location': [2.51615513578063, -39.039146902938], 'device': '40:4e:36:22:b8:01'}, {'timestamp': 1552597773.602372, 'location': [2.51615513578063, -39....</msg>
+<status status="PASS" starttime="20190428 14:38:27.361" endtime="20190428 14:38:27.362"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output['loc_updates'][0]['device']}</arg>
+<arg>40:4e:36:22:b8:01</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.362" endtime="20190428 14:38:27.362"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output['loc_updates'][0]['location'][0]}</arg>
+<arg>${2.51615513578063}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.362" endtime="20190428 14:38:27.363"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output['loc_updates'][0]['location'][1]}</arg>
+<arg>${-39.039146902938}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.363" endtime="20190428 14:38:27.363"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${output['loc_updates']}</arg>
+</arguments>
+<assign>
+<var>${locations}</var>
+</assign>
+<msg timestamp="20190428 14:38:27.364" level="INFO">Length is 84</msg>
+<msg timestamp="20190428 14:38:27.364" level="INFO">${locations} = 84</msg>
+<status status="PASS" starttime="20190428 14:38:27.363" endtime="20190428 14:38:27.364"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${84}</arg>
+<arg>${locations}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.364" endtime="20190428 14:38:27.364"></status>
+</kw>
+<kw name="Clean Up Files" type="teardown">
+<doc>Removes files created in tests</doc>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.365" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-01.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-01.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:27.365" endtime="20190428 14:38:27.365"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.365" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-02.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-02.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:27.365" endtime="20190428 14:38:27.365"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.365" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-03.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-03.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:27.365" endtime="20190428 14:38:27.366"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.366" level="INFO" html="yes">Removed file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190428 14:38:27.366" endtime="20190428 14:38:27.366"></status>
+</kw>
+<status status="PASS" starttime="20190428 14:38:27.364" endtime="20190428 14:38:27.366"></status>
+</kw>
+<doc>Checks the location calculation algorithms accuracy on a
+small pcap file extracted from test capture on March 14th.
+Checks the values computed against known test output.</doc>
+<status status="PASS" starttime="20190428 14:38:25.464" endtime="20190428 14:38:27.366" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Location Time Interval Test">
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP01} -Y '(frame.time &gt;= ${CAP_TIME_INVALID_START01}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_INVALID_END01})' -w tests/test_caps/small_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.368" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-01.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:33.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:36.000000000")' -w tests/test_caps/small_cap_test-01.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:27.367" endtime="20190428 14:38:27.556"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP02} -Y '(frame.time &gt;= ${CAP_TIME_INVALID_START02}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_INVALID_END02})' -w tests/test_caps/small_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.558" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-adj-02.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:39.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:41.000000000")' -w tests/test_caps/small_cap_test-02.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:27.556" endtime="20190428 14:38:27.747"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>tshark -r ${VALID_PCAP03} -Y '(frame.time &gt;= ${CAP_TIME_INVALID_START03}) &amp;&amp; (frame.time &lt;= ${CAP_TIME_INVALID_END03})' -w tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.749" level="INFO">Running command 'tshark -r tests/test_caps/capture-small-adj-03.cap -Y '(frame.time &gt;= "Mar 14, 2019 17:09:45.000000000") &amp;&amp; (frame.time &lt;= "Mar 14, 2019 17:09:47.603000000")' -w tests/test_caps/small_cap_test-03.cap'.</msg>
+<status status="PASS" starttime="20190428 14:38:27.748" endtime="20190428 14:38:27.976"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.977" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-01.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-01.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:27.977" endtime="20190428 14:38:27.977"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.978" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-02.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-02.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:27.978" endtime="20190428 14:38:27.978"></status>
+</kw>
+<kw name="Should Exist" library="OperatingSystem">
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.978" level="INFO" html="yes">Path '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-03.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_caps/small_cap_test-03.cap&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:27.978" endtime="20190428 14:38:27.978"></status>
+</kw>
+<kw name="Change AP Config File">
+<doc>Changes the configuration files that the APs use for
+argus</doc>
+<arguments>
+<arg>tests/test_caps/small_cap_test-01.cap</arg>
+<arg>tests/test_caps/small_cap_test-02.cap</arg>
+<arg>tests/test_caps/small_cap_test-03.cap</arg>
+</arguments>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus1</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.979" endtime="20190428 14:38:27.983"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_1}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.984" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:27.984" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:27.983" endtime="20190428 14:38:27.984"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus2</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.984" endtime="20190428 14:38:27.988"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_2}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.988" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:27.988" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:27.988" endtime="20190428 14:38:27.989"></status>
+</kw>
+<kw name="Change Config Capture File" library="YamlLibrary">
+<arguments>
+<arg>argus3</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:27.989" endtime="20190428 14:38:27.993"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>${YAML_PATH}</arg>
+<arg>${config_file_3}</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.993" level="INFO" html="yes">Reading file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/config.yml"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/config.yml&lt;/a&gt;'.</msg>
+<msg timestamp="20190428 14:38:27.993" level="INFO">1 out of 14 lines matched</msg>
+<status status="PASS" starttime="20190428 14:38:27.993" endtime="20190428 14:38:27.993"></status>
+</kw>
+<status status="PASS" starttime="20190428 14:38:27.978" endtime="20190428 14:38:27.994"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>python3 argus.py</arg>
+</arguments>
+<msg timestamp="20190428 14:38:27.995" level="INFO">Running command 'python3 argus.py 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20190428 14:38:27.994" endtime="20190428 14:38:28.842"></status>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.842" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20190428 14:38:28.842" endtime="20190428 14:38:28.842"></status>
+</kw>
+<kw name="File Should Not Be Empty" library="OperatingSystem">
+<doc>Fails if the specified directory is empty.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.843" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;' contains 19 bytes.</msg>
+<status status="PASS" starttime="20190428 14:38:28.843" endtime="20190428 14:38:28.843"></status>
+</kw>
+<kw name="Get Dict From Json File" library="JSONLibrary">
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20190428 14:38:28.843" level="INFO">${output} = {'loc_updates': []}</msg>
+<status status="PASS" starttime="20190428 14:38:28.843" endtime="20190428 14:38:28.843"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${output['loc_updates']}</arg>
+</arguments>
+<assign>
+<var>${locations}</var>
+</assign>
+<msg timestamp="20190428 14:38:28.844" level="INFO">Length is 0</msg>
+<msg timestamp="20190428 14:38:28.844" level="INFO">${locations} = 0</msg>
+<status status="PASS" starttime="20190428 14:38:28.843" endtime="20190428 14:38:28.844"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${0}</arg>
+<arg>${locations}</arg>
+</arguments>
+<status status="PASS" starttime="20190428 14:38:28.844" endtime="20190428 14:38:28.844"></status>
+</kw>
+<kw name="Clean Up Files" type="teardown">
+<doc>Removes files created in tests</doc>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-01.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.845" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-01.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-01.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:28.845" endtime="20190428 14:38:28.845"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-02.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.845" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-02.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-02.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:28.845" endtime="20190428 14:38:28.845"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>tests/test_cap_test-03.cap</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.846" level="INFO" html="yes">File '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-03.cap"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/tests/test_cap_test-03.cap&lt;/a&gt;' does not exist.</msg>
+<status status="PASS" starttime="20190428 14:38:28.845" endtime="20190428 14:38:28.846"></status>
+</kw>
+<kw name="Remove File" library="OperatingSystem">
+<doc>Removes a file with the given path.</doc>
+<arguments>
+<arg>output.json</arg>
+</arguments>
+<msg timestamp="20190428 14:38:28.846" level="INFO" html="yes">Removed file '&lt;a href="file:///home/dev/Desktop/senior-design/argus/argus-dev/output.json"&gt;/home/dev/Desktop/senior-design/argus/argus-dev/output.json&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20190428 14:38:28.846" endtime="20190428 14:38:28.846"></status>
+</kw>
+<status status="PASS" starttime="20190428 14:38:28.844" endtime="20190428 14:38:28.846"></status>
+</kw>
+<doc>Verifies that the location ignores packets that have too large
+of a time delta.</doc>
+<status status="PASS" starttime="20190428 14:38:27.366" endtime="20190428 14:38:28.846" critical="yes"></status>
+</test>
+<doc>Tests for the location calculation of argus</doc>
+<status status="PASS" starttime="20190428 14:38:22.918" endtime="20190428 14:38:28.847"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" id="s1" name="Argus">Argus</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
