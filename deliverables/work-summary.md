@@ -5,6 +5,8 @@
 * Spring: 45 hours
 * Total: 90 hours
 
+Matt's time was spent primarily on two different efforts: research and location calculation implementation. Our project required that we use 802.11 packets to trilaterate the device emmitting the packets. Matt first responsibility was to look into prior works in wifi based trilateration and to decide how we should go about it for our purposes. Once he had settled on a method, he then spent the rest of his time implementing it in our code base. Both of these efforts required about 3-4 hours of work per week
+
 ### Anthony Jantzen
 * Fall: 45 hours
 * Spring: 45 hours
@@ -17,7 +19,7 @@ As team lead, Anthony oversaw the other three team members. His focus was on man
 * Spring: 45 hours
 * Total: 90 hours
 
-Pat's time was spent focusing on research, packet processing and testing. In the fall, he worked with Matt researching different methods of capturing and processing packets as well as different trilateration algorithms This accounted for about 3-4 hours a week of planning the development for spring. Once a design was specified with the help of Anthony, Pat and Matt worked on integrating the algorithms into Argus. Pat directed the majority of his efforts in the spring implementing a processing module that would extract the necessary data from a packet capture. This development took about 3-4 hours for the first half of the spring semester. After this was completed, Pat refocused his efforts into helping Anthony with the testing. Again, this took 3-4 hours a week in researching robotframework, writing and researching testing support libraries, writing tests, and fixing bugs that were identified through the tests.  
+Pat's time was spent focusing on research, packet processing and testing. In the fall, he worked with Matt researching different methods of capturing and processing packets as well as different trilateration algorithms This accounted for about 3-4 hours a week of planning the development for spring. Once a design was specified with the help of Anthony, Pat and Matt worked on integrating the algorithms into Argus. Pat directed the majority of his efforts in the spring implementing a processing module that would extract the necessary data from a packet capture. This development took about 3-4 hours for the first half of the spring semester. After this was completed, Pat refocused his efforts into helping Anthony with the testing. Again, this took 3-4 hours a week in researching robotframework, writing and researching testing support libraries, writing tests, and fixing bugs that were identified through the tests.
 
 ### Kyle Trout
 * Fall: 45 hours
