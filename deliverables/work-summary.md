@@ -17,6 +17,8 @@ As team lead, Anthony oversaw the other three team members. His focus was on man
 * Spring: 45 hours
 * Total: 90 hours
 
+Pat's time was spent focusing on research, packet processing and testing. In the fall, he worked with Matt researching different methods of capturing and processing packets as well as different trilateration algorithms This accounted for about 3-4 hours a week of planning the development for spring. Once a design was specified with the help of Anthony, Pat and Matt worked on integrating the algorithms into Argus. Pat directed the majority of his efforts in the spring implementing a processing module that would extract the necessary data from a packet capture. This development took about 3-4 hours for the first half of the spring semester. After this was completed, Pat refocused his efforts into helping Anthony with the testing. Again, this took 3-4 hours a week in researching robotframework, writing and researching testing support libraries, writing tests, and fixing bugs that were identified through the tests.  
+
 ### Kyle Trout
 * Fall: 45 hours
 * Spring: 45 hours
