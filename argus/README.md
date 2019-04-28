@@ -97,6 +97,7 @@ This will output a log.html file that shows Argus as a test suite and the result
 * [Python3](https://www.python.org/download/releases/3.0/)
   * [Download](https://www.python.org/downloads/)
   * [Documentation](https://www.python.org/doc/)
+* [Robot Framework](https://robotframework.org/)
 * [Scapy Library](https://scapy.net/)
 * [SciPy Library (with NumPy)](https://www.scipy.org/)
 
