@@ -41,7 +41,7 @@ On the central repository:
    * *output.json* will be written to *processing* directory.
 
 #### Packet Processing
-Packet processing is all performed under [packet_processor.py](argus-dev/packet_process.py).
+Packet processing is all performed under [packet_processor.py](argus-dev/packet_processor.py).
 
 It utilizes Python's Scapy library to parse the packets into objects. The Scapy objects are then iterated through to extract important information for location processing. Output is in the following format:
 
@@ -55,7 +55,19 @@ item = {
 ```
 
 #### Location Processing
+Location processing is all performed under [location.py](argus-dev/location.py).
 
+It utilizes trilateration algorithms in conjunction with Python's SciPy and NumPy libraries to calculate locations. Specifically, it trilaterates a location on a cartesion grid given the location of known locations (access points) and the desired point's distance from those locations using the free space path loss algorithm. Mean standard error is implemented to minimize the error in estimations. Location updates are then written to a list in the following format before being dumped to json:
+
+```
+data["loc_updates"].append({
+    "timestamp": timestamp,
+    "location": location,
+    "device": device
+})
+```
+
+Locations are in the form of an x,y coordinate to be plotted by the heatmap logic on the frontend application.
 
 ## User Interface Setup
 
