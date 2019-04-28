@@ -17,8 +17,7 @@ For each access point (AP):
 2. Plug AP into power source.
 3. Connect AP to a switch that has internet access.
 4. Install *tcpdump* on the AP.
-5. Install *lsblk* on the AP.
-6. Follow OpenWRT USB drive setup (see References and Resources below).
+5. Follow OpenWRT USB drive setup (see References and Resources below).
 
 Once the above are completed, find a power source for each AP. Ping each of them to verify connectivity, then ssh into them. *tcpdump* will be ready to use, and *rsync* can be utilized to periodically transfer packet capture files to your central repository.
 
@@ -41,7 +40,7 @@ On the central repository:
    * *output.json* will be written to *processing* directory.
 
 #### Packet Processing
-Packet processing is all performed under [packet_processor.py](argus-dev/packet_processor.py).
+Packet processing is all performed under [packet_processor.py](argus-dev/packet_process.py).
 
 It utilizes Python's Scapy library to parse the packets into objects. The Scapy objects are then iterated through to extract important information for location processing. Output is in the following format:
 
@@ -55,19 +54,7 @@ item = {
 ```
 
 #### Location Processing
-Location processing is all performed under [location.py](argus-dev/location.py).
 
-It utilizes trilateration algorithms in conjunction with Python's SciPy and NumPy libraries to calculate locations. Specifically, it trilaterates a location on a cartesion grid given the location of known locations (access points) and the desired point's distance from those locations using the free space path loss algorithm. Mean standard error is implemented to minimize the error in estimations. Location updates are then written to a list in the following format before being dumped to json:
-
-```
-data["loc_updates"].append({
-    "timestamp": timestamp,
-    "location": location,
-    "device": device
-})
-```
-
-Locations are in the form of an x,y coordinate to be plotted by the heatmap logic on the frontend application.
 
 #### Testing
 Testing was conducted using the robotframework. Robotframework tests consist of test suites, test cases, and test keywords. A test keyword tests an indivudal element from argus. A test case insures that individual keywords integrate together. A test suite is composed of multiple test cases that verifies the integrity of the program. To run the tests, install robotframeowrk with:
@@ -102,3 +89,10 @@ This will output a log.html file that shows Argus as a test suite and the result
 * [SciPy Library (with NumPy)](https://www.scipy.org/)
 
 ## FAQ
+What packets does argus take into account for location calculation?
+
+Argus's packet processing module ignores 802.11 Beacon Packets and 802.11 Probe Response packest as these packets do not originate from devices but rather other access points. 
+
+How do I change what pacekts are ignored?
+
+If you want to ignore additional packets, you can either add the (scapy 802.11 protocol)[https://github.com/secdev/scapy/blob/master/scapy/layers/dot11.py] to the list of (ignored packets)[https://github.com/anthony-jantzen/senior-design/blob/master/argus/argus-dev/packet_processor.py#L16] or filter the pcap file prior to input on argus using (tshark)[https://www.wireshark.org/docs/man-pages/tshark.html] 
