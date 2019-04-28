@@ -6,7 +6,22 @@ Argus is a tool for estimating the locations of devices positioned on or nearby 
 
 **Note:** Network setup may be skipped for pre-existing mesh networks with packet capture. Simply send packet capture to central repository and continue on to the data processing setup.
 
+#### Hardware Requirements
+* (3x) Wireless Access Points
+**Note:** The access point we utilized for this project was the GL.iNet 150M Mini Smart Router. Setup may differ slightly when using other products.
+
+For each access point (AP):
+1. Set AP in router mode.
+2. Plug AP into power source.
+3. Connect AP to a switch that has internet access.
+4. Install *tcpdump* on the AP.
+5. Install *lsblk* on the AP.
+6. Follow OpenWRT USB drive setup (see References and Resources below).
+
+Once the above are completed, find a power source for each AP. Ping each of them to verify connectivity, then ssh into them. *tcpdump* will be ready to use, and rsync can be utilized to periodically transfer packet capture files to your central repository.
+
 ## Data Processing Setup
+
 
 ## User Interface Setup
 
