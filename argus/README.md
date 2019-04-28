@@ -102,10 +102,12 @@ This will output a log.html file that shows Argus as a test suite and the result
 * [SciPy Library (with NumPy)](https://www.scipy.org/)
 
 ## FAQ
-What packets does argus take into account for location calculation?
 
-Argus's packet processing module ignores 802.11 Beacon Packets and 802.11 Probe Response packest as these packets do not originate from devices but rather other access points. 
+#### What packets does argus take into account for location calculation?
 
-How do I change what pacekts are ignored?
+Argus' packet processing module ignores 802.11 Beacon Packets and 802.11 Probe Response packets as these packets do not originate from devices but rather other access points. 
+
+#### How do I change what packets are ignored?
 
 If you want to ignore additional packets, you can either add the [scapy 802.11 protocol](https://github.com/secdev/scapy/blob/master/scapy/layers/dot11.py) to the list of [ignored packets](https://github.com/anthony-jantzen/senior-design/blob/master/argus/argus-dev/packet_processor.py#L16) or filter the pcap file prior to input on argus using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+
