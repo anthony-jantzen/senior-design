@@ -38,8 +38,23 @@ On the central repository:
 4. Execute [argus.py](argus-dev/argus.py).
    * The main controller of the project.
    * This will utilize the config file above to gather the packet capture files, then call the packet and location processor (see below for details).
+   * *output.json* will be written to *processing* directory.
 
 #### Packet Processing
+Packet processing is all performed under [packet_processor.py](argus-dev/packet_process.py).
+
+It utilizes Python's Scapy library to parse the packets into objects. The Scapy objects are then iterated through to extract important information for location processing. Output is in the following format:
+
+```
+item = {
+    'MAC' : device mac address,
+    'AP' : ap device communicated with (argus1, argus2, argus3),
+    'RSSI' : signal strength of that device,
+    'TIME' : timestamp of when the packet sent
+}
+```
+
+#### Location Processing
 
 
 ## User Interface Setup
@@ -49,7 +64,9 @@ On the central repository:
 
 #### Setup
 1. Git clone [argus-ui](argus-ui/) to the central repository.
-2. Follow the install guide located in the [README](argus-ui/README.md).
+2. Follow the installation and setup guide located in the [README](argus-ui/README.md).
+   * Web application will be running locally on central repository.
+   * *output.json* will be grabbed from the *processing* directory and used to graph the heatmap.
 
 ## References and Resources
 * [GL.iNet](https://www.gl-inet.com/)
