@@ -2,6 +2,7 @@
 We will approach testing in a similar fashion as our design by splitting the tests via modules to ensure our final product is functional and efficient. We will start by setting up hardware and ensuring network connections are consistent. From there, underlying processes of our subsystems will be designed and tested. Subsystems will then be tested to ensure proper integration of processes. System-wide integration testing will then occur to ensure cohesiveness of all modules. Next, the product will undergo performance and stress testing to ensure efficiency and durability. Finally, we will conduct end user tests to gather feedback and ensure the product is intuitive.
 
 ## Part II. Test Case Descriptions
+The following descriptions detail the primary test cases implemented by the team to ensure the functionality and performance of the project. Additional automated testing was performed using the Robot Framework under [Argus Log](argus-log.pdf). Please see the References and Resources section of the [User Manual](../../argus/README.md) for more information about the Robot Framework.
 
 ### Network Device Tests
 
