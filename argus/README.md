@@ -69,7 +69,7 @@ data["loc_updates"].append({
 Locations are in the form of an x,y coordinate to be plotted by the heatmap logic on the frontend application.
 
 #### Testing
-Testing was conducted using the robotframework. Robotframework tests consist of test suites, test cases, and test keywords. A test keyword tests an indivudal element from argus. A test case insures that individual keywords integrate together. A test suite is composed of multiple test cases that verifies the integrity of the program. To run the tests, install robotframeowrk with:
+Testing was conducted using the Robot Framework. Robot Framework tests consist of test suites, test cases, and test keywords. A test keyword tests an indivudal element from argus. A test case insures that individual keywords integrate together. A test suite is composed of multiple test cases that verifies the integrity of the program. To run the tests, install Robot Framework with:
 
 ```pip3 install robotframework```
 
@@ -92,6 +92,7 @@ This will output a log.html file that shows Argus as a test suite and the result
    * *output.json* will be grabbed from the *processing* directory and used to graph the heatmap.
 
 ## References and Resources
+* [Free Space Path Loss Algorithm](https://en.wikipedia.org/wiki/Free-space_path_loss)
 * [GL.iNet](https://www.gl-inet.com/)
 * [Preact-CLI](https://github.com/developit/preact-cli)
 * [Python3](https://www.python.org/download/releases/3.0/)
@@ -110,4 +111,12 @@ Argus' packet processing module ignores 802.11 Beacon Packets and 802.11 Probe R
 #### How do I change what packets are ignored?
 
 If you want to ignore additional packets, you can either add the [scapy 802.11 protocol](https://github.com/secdev/scapy/blob/master/scapy/layers/dot11.py) to the list of [ignored packets](https://github.com/anthony-jantzen/senior-design/blob/master/argus/argus-dev/packet_processor.py#L16) or filter the pcap file prior to input on argus using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+
+#### Can I use my own mesh network with Argus?
+
+Any mesh network can be applied to Argus. However, there are a few things to note when doing this. First, the setup process for the network and your access points to perform a packet capture may differ slightly than our guide. Additionally, the trilateration algorithm is optimized for three access points, so slight modifications will need to be made to the code when using four or more.
+
+#### Can I use Python 2 with Argus?
+
+It is highly recommended to use Python3 when installing and running Argus as that is what it was written in. Dependencies may be lost and conflicts may arise if you attempt to use Python 2.
 
