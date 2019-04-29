@@ -110,7 +110,7 @@ Argus' packet processing module ignores 802.11 Beacon Packets and 802.11 Probe R
 
 #### How do I change what packets are ignored?
 
-If you want to ignore additional packets, you can either add the [scapy 802.11 protocol](https://github.com/secdev/scapy/blob/master/scapy/layers/dot11.py) to the list of [ignored packets](https://github.com/anthony-jantzen/senior-design/blob/master/argus/argus-dev/packet_processor.py#L16) or filter the pcap file prior to input on argus using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+If you want to ignore additional packets, you can either add the [scapy 802.11 protocol](https://github.com/secdev/scapy/blob/master/scapy/layers/dot11.py) to the list of [ignored packets](https://github.com/anthony-jantzen/senior-design/blob/master/argus/argus-dev/packet_processor.py#L16) or filter the pcap file prior to input on argus using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html).
 
 #### Can I use my own mesh network with Argus?
 
