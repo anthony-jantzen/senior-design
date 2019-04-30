@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import style from './style';
-import capture from '../../../processing/output.json';
+import capture from '../../../../argus-dev/output.json';
 import Heatmap from '../../components/heatmap';
 
 export default class Home extends Component {
